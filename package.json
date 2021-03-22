@@ -1,13 +1,13 @@
 {
   "name": "tech-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple site to blog about tech",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Stephen Beiter",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",

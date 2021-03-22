@@ -1,0 +1,27 @@
+<div class='container'>
+
+  <div class='card'>
+    {{> post-info post}}
+
+    {{> comments post.comments}}
+  </div>
+
+  {{#if loggedIn}}
+  <div class='card add-comment'>
+
+    <form class='comment-form card-content'>
+      <span class='form-text'>add comments</span>
+      <div>
+        <textarea name='comment-body' class='materialize-textarea white'></textarea>
+      </div>
+      <div class='buttons'>
+        <button type='submit' class='btn med-blue'>submit<i class="material-icons right">send</i></button>
+      </div>
+    </form>
+
+  </div>
+  {{/if}}
+
+</div>
+
+<script src='/js/comment.js'></script>

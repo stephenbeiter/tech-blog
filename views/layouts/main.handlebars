@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel='stylesheet' href='/css/styles.css'>
+  <title>tech-blog</title>
+</head>
+
+<body>
+
+  <div class='navbar-fixed'>
+    <nav class='med-blue'>
+      <div class='nav-wrapper'>
+        {{#if dashBoard}}
+        <a href="/" id='blog-logo' class="brand-logo">Dashboard</a>
+        {{else}}
+        <a href="/" id='blog-logo' class="brand-logo">tech-blog</a>
+        {{/if}}
+
+        <ul class='right'>
+          <li><a href='/'>home</a></li>
+          {{#if loggedIn}}
+          <li><a href='/dashboard'>dashboard</a></li>
+          <li id='logout'><a href="#">logout</a></li>
+          {{else}}
+          <li><a href='/login'>login</a></li>
+          {{/if}}
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+  <main class='container'>
+    {{{ body }}}
+  </main>
+
+  {{#if loggedIn}}
+  <script src='/javascript/logout.js'></script>
+  {{/if}}
+</body>
+
+</html>
